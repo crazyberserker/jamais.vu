@@ -13,6 +13,12 @@ include('./database/questions.php');
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title> Jamais Vu</title>
 	<link rel='stylesheet' href='css/style.min.css' />
+
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
 <body>
 	<!-- navbar -->
@@ -44,50 +50,44 @@ include('./database/questions.php');
 					</ul>
 				</div>
 				<div class="app__main">
-					<div class="text-container">
-						<h3 class="app__main__title">This is my information</h3>
-						<?php
-
-						?>
-					</div>
 					<div class="table-title">
 						<h3>Experience Information table</h3>
 					</div>
 					
 					<table class="table-fill">
-						<thead>
-							<tr>
-								<th class="text-left">Class</th>
-								<th class="text-left">User Information</th>
-							</tr>
-						</thead>
-						<tbody class="table-hover">
-						<td></td>
+
+						<tbody class="table">
+						<td>
 							<?php
-									$username = $_SESSION['username'];
+									$username = $_SESSION['user2'];
 									getPhoto($username);
 									echo "<br>";
-									$user = get_ALL_my_Informations($username);
-
-								
-								
+									$user = get_ALL_my_Informations($username);							
 							?>
+							</td>
 						<td>
 						<?php
-									$username = $_SESSION['username'];
-									getPhoto($username);
-									echo "<br>";
-									$user = get_ALL_my_Informations($username);
+									$username = $_SESSION['ID'];
+									echo "<br>";					
+									$user = get_ALL_questions($username);
 
-								
 						?>
 						</td>
 							</tbody>
 					</table>
+
+					<a href="geral.php" class="button button__accent">Finish</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
 
 <script src='js/app.min.js'></script>
 </body>

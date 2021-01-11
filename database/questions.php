@@ -62,6 +62,7 @@
         echo "<br>";
         echo "<br>";
       }	
+      return $user;
     }
    
     function get_ALL_exp_on_me($user2){
@@ -141,5 +142,55 @@
 
 
   }
+
+  function get_ALL_questions($id){
+    global $conn;
+    $stmt = $conn->prepare('SELECT * FROM answer WHERE id = ?');
+    $stmt->execute(array($id));
+    $user = $stmt->fetchALL();
+    
+      foreach ($user as $row)
+        {
+          echo "<tr>";
+               echo "<td> The person in the photo has a __ face.</td>";
+               echo "<td>" . $row['q1'] . "</td>";
+          echo "</tr>";
+          echo "<tr>";
+               echo "<td> He/She seems</td>";
+               echo "<td>" . $row['q2'] . "</td>";
+          echo "</tr>";
+          echo "<tr>";
+              echo "<td> But I think deep down he/she is</td>";
+              echo "<td>" . $row['q3'] . "</td>";
+          echo "</tr>";
+          echo "<tr>";
+              echo "<td> How old is this person? </td>";
+              echo "<td>" . $row['q4'] . "</td>";
+          echo "</tr>";
+          echo "<tr>";
+              echo '<td> Favorite music genre: </td>';
+              echo "<td>" . $row['q5'] . "</td>";
+          echo "</tr>";
+          echo "<tr>";
+              echo "<td> Favorite movie genre: </td>";
+              echo "<td>" . $row['q6'] . "</td>";
+          echo "</tr>";
+          echo "<tr>";
+              echo "<td> Favorite Food: </td>";
+              echo "<td>" . $row['q7'] . "</td>";
+          echo "</tr>";
+          echo "<tr>";
+              echo "<td> Profession / Area of Study: </td>";
+              echo "<td>" . $row['q8'] . "</td>";
+          echo "</tr>";
+          echo "<tr>";
+              echo "<td> Hobby: </td>";
+              echo "<td>" . $row['q9'] . "</td>";
+          echo "</tr>";
+          
+        }
+       
+      
+      }
 
 ?>

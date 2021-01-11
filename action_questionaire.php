@@ -6,6 +6,7 @@
 
   $user1 = $_SESSION['user1'];
   $user2 = $_SESSION['user2'];
+  
   $q1 = $_POST['q1'];
   $q2 = $_POST['q2'];
   $q3 = $_POST['q3'];
@@ -20,7 +21,7 @@
 
   if(questionaire($id, $q1, $q2 ,$q3, $q4, $q5, $q6, $q7, $q8, $q9)){
     $_SESSION['ID'] = $id;
-    header('Location: geral.php');
+    header('Location: After.php');
   }
   else
   header('Location: geral.php');

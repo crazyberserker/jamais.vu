@@ -155,7 +155,7 @@ function isValid($username, $password){
       foreach ($user as $row)
         {
           echo "<tr>";
-               echo "<td> Username</td>";
+               echo "<td class='cell'> Username</td>";
                echo "<td>" . $row['username'] . "</td>";
           echo "</tr>";
           echo "<tr>";
