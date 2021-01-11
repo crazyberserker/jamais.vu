@@ -59,7 +59,7 @@
 			<div class="expanded__inner">
 				<div class="expanded__media">
 					<video width="100%" height="100%" controls>
-						<source src="./images/Abertura.mp4" type="video/mp4">
+						<source src="./images/Teaser.mp4" type="video/mp4">
 					</video>
 				</div>
 				<div class="expanded__content">
@@ -87,7 +87,7 @@
 						<img src="./images/together.svg" class="step__image">
 					</div>
 					<h3>2º Guessing</h3>
-					<p>You create a profile for a person you don�t know.</p>
+					<p>You create a profile for a person you don't know.</p>
 				</div>
 				<div class="step">
 					<div class="step__media">
