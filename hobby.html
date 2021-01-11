@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Jamais Vu</title>
+	<link rel='stylesheet' href='css/style.min.css' />
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+
+		function drawChart() {
+
+		var data = google.visualization.arrayToDataTable([
+		['Hobby', 'Number'],
+		['Scrapbooking', 5],
+		['Drawing', 4],
+		['Painting', 5],
+		['Reading', 2],
+		['Photography', 10],
+		['Calligraphy', 1],
+		['Cooking', 4],
+		['Films', 8],
+		['Sports', 3],
+		['Others', 6],
+		]);
+
+		var options = {
+		title: 'Hobby'
+		};
+
+		var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+		chart.draw(data, options);
+		}
+	</script>
+</head>
+<body>
+	<!-- navbar -->
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<a href="index.html"><img src="./images/JV-01.png" width="79px" height="56px"></a>
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="regist.php">Register</a></li>
+						<li><a href="login.php">Login</a></li>
+						<li><a href="pitch.html">Documentation</a></li>
+						<li><a href="stats.html">Statistics</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Statistics</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container">
+			<div class="page__inner">
+				<div class="page__menu">
+					<ul class="vMenu">
+						<li><a href="gender.html">Gender and Age</a></li>
+						<li><a href="age.html">Age</a></li>
+						<li><a href="food.html">Favorite Food</a></li>
+						<li><a href="hobby.html" class="vMenu--active">Hobby</a></li>
+					</ul>
+				</div>
+					<!--Div that will hold the pie chart-->
+					<div id="piechart" style="width: 900px; height: 500px;"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Footer -->
+	<div class="footer footer--dark">
+		<div class="container">
+			<div class="footer__inner">
+				<a href="benchmark.html" class="footer__textLogo">Contact us!</a>
+				<div class="footer__data">
+					<div class="footer__data__item"
+						<div class="footer__row">
+						</div>
+						<div class="footer__row">
+							<a href="https://instagram.com/jamais_vu_21?igshid=2b29o1p2t1jo" target="_blank">
+									<img width="70" height="70" src="./images/instagram.png">
+
+							</a>
+
+							<a href="https://twitter.com/Jamaisv19003505?s=03" target="_blank">
+								<img width="70" height="70" src="./images/twitter.png">
+							</a>
+
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<script src='js/app.min.js'></script>
+</body>
+</html>
